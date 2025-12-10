@@ -1,0 +1,65 @@
+//Code for ATM:
+#include <stdio.h>
+
+int main()
+{
+   long int Vnum=6554433221;
+   float Balance=20000.00;
+   int Choice;
+   long int Accnum;
+   float DepAmount;
+   printf("Welcome to my Bank\n");
+   printf("Enter your Account Number:");
+   scanf("%ld",&Accnum);
+   if(Accnum==Vnum){
+       printf("Welcome Hari Prasath P, Your logged in\n");
+        printf("Choose Your Choice: \n 1.Check Balance. \n 2.Withdraw. \n 3.Deposition. \n 4.Exit.\n");
+        scanf("%d",&Choice);
+        if(Choice==1){
+            printf("Your Bank Balance is Rs.%.2f\n",Balance);
+        }
+        else if(Choice==2){
+            printf("Enter Your Withdrawal Amount\n");
+            float Amount;
+            scanf("%f",&Amount);
+            if(Amount<=Balance){
+                Balance-=Amount;
+               printf("Take your cash %.2f\n",Amount);
+                printf("Your Bank Balance is Rs.%.2f\n",Balance);
+            }
+            else{
+                printf("Entered Amount is larger than your Bank Balance.\n");
+            }
+        }
+        else if(Choice==3){
+            printf("Enter the amount to be deposited\n");
+          scanf("%f",&DepAmount);
+            Balance+=DepAmount;
+            printf("Your Amount Rs.%.2f is successfully Deposited\n",DepAmount);
+           printf("Now Your Balance Amount is Rs.%.2f\n",Balance);
+        }   
+        else if(Choice==4){
+            printf("Thank You For Comming.\n");
+        }
+        else{
+            printf("Invalid Choice");
+        }
+   }
+   else{
+       printf("Entered Account Number is Wrong Please Try Again. ");
+   }
+
+    return 0;
+}
+// output
+
+Welcome to my Bank
+Enter your Account Number:6554433221
+Welcome Hari Prasath P, Your logged in
+Choose Your Choice: 
+ 1.Check Balance. 
+ 2.Withdraw. 
+ 3.Deposition. 
+ 4.Exit.
+4
+Thank You For Comming.
