@@ -5,7 +5,7 @@ int i,j,n;
 
 int main(){
     
-    printf("enter your rows : \n");
+    printf("enter your number : \n");
     scanf("%d",&n);
     
     for(int i=n;i>=n;i--)
@@ -23,3 +23,7 @@ int main(){
     
     return 0;
 }
+// output
+enter your number : 
+8
+        ********
